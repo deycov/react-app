@@ -32,16 +32,17 @@ function App() {
   return (
     //React.Fragment para contener los atributos xjs en el return sin errores y que no salga un div
     <div className='App'>
-      <Title/>
+     
+      <div>
+        <Title/>
+      </div>  
       <Search/>
       <List>
-        <ul>
           {arr.map(x => ( <Item 
             key={x.text} // identificador de cada elemento guardado
             text={x.text} 
             complete={x.complete} 
           /> ))}
-          </ul>
       </List>
       <Button/>
     </div>

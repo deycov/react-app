@@ -1,6 +1,8 @@
+import './list.css'
+
 function List(props){
     return(
-        <li>
+        <li className='item'>
             {props.children}
         </li>
     );

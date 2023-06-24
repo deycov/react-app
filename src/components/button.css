@@ -1,0 +1,19 @@
+.btn-control{
+    position: fixed;
+    right: 20%;
+    bottom: 8%;     
+    width: 75px;
+    height: 75px;
+    border-radius: 50px;
+    border: none;
+    background-color: #3390fa;
+    color: #fff;
+}
+
+.btn-control:hover{
+    background-color: #4380ea;
+    box-shadow: 0px 0px 12px 10px rgba(0,0,0,0.1);
+    transition: .4s;
+}
+
+
