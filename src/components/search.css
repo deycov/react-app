@@ -1,0 +1,22 @@
+.search-container{
+    padding: 14px;
+}
+
+.search{
+    border: none;
+    width: 350px;
+    font-size: 20px;
+    border-bottom: 2px solid #808080;
+    padding: 8px;
+    transition: .3s;
+}
+
+.search:hover{
+    background-color: #f2f2f2;
+    border-radius: 4px 4px 0px 0px;
+}
+
+.search:focus{
+    outline: none;
+    border-bottom: 2px solid #3096f0;
+}
