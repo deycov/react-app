@@ -1,13 +1,13 @@
 import './search.css'
 
-function Search({searchValue, setSearchValue}){
+function Search({searchValue, setSearchValues}){
     return(
         <input 
             className="search" 
             placeholder="Buscar..."
             value = {searchValue}
             onChange={(e)=>{
-                setSearchValue(e.target.value);
+                setSearchValues(e.target.value);
             }}
         />
     );
