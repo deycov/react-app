@@ -1,7 +1,7 @@
 #root{
   margin-top: 0px;
-  background: #f7f7f7;
-  height: 105vh;
+  background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+  height: 120vh;
 }
 
 .App {

@@ -1,9 +1,9 @@
 import './title.css';
 
-function Title(){
+function Title({completed, total}){
   return( 
-    <h1 className="title"> Xcantidad de trabajos realizados de Ycantidad </h1>
+    <h1 className="title"> {completed} trabajos realizados de {total} </h1>
   );
 }
 
-export { Title }
+export {Title};

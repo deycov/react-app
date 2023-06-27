@@ -1,19 +1,20 @@
 .btn-control{
     position: fixed;
     right: 20%;
-    bottom: 8%;     
-    width: 75px;
-    height: 75px;
+    bottom: 8%;  
+    width: 68px;
+    height: 68px;
     border-radius: 50px;
     border: none;
-    background-color: #3390fa;
-    color: #fff;
+    background-color: #fff;
+    color: #000;
+    font-size: 60px;
 }
 
 .btn-control:hover{
-    background-color: #4380ea;
+    background-color: #43c0ea;
     box-shadow: 0px 0px 12px 10px rgba(0,0,0,0.1);
-    transition: .4s;
+    transition: .3s;
 }
 
 

@@ -1,12 +1,17 @@
 import './search.css'
 
-function Search(){
+function Search({searchValue, setSearchValue}){
     return(
-        <div className="search-container">
-            <input className="search" placeholder="Buscar..."/>
-        </div>
+        <input 
+            className="search" 
+            placeholder="Buscar..."
+            value = {searchValue}
+            onChange={(e)=>{
+                setSearchValue(e.target.value);
+            }}
+        />
     );
     
 }
 
-export { Search }
+export { Search };

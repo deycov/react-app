@@ -1,13 +1,25 @@
-function Item({text, complete}){
-    return(
+import check from '../check.svg';
+import cancel from '../cancel.svg';
+
+function Item({ text, complete }) {
+    return (
         <div className="list-item">
-            <span> V </span>
-            <p> {text} </p>
-            <span> X </span>
-            
+            <img
+                className={`check ${complete && "check--active"}`}
+                src={check}
+                onClick={() => { }}
+            ></img>
+
+            <p className={`text ${complete && "text--active"}`}> {text} </p>
+
+            <img
+                className={`cancel ${complete && "cancel--active"}`}
+                src={cancel}
+                onClick={() => { }}
+            ></img>
         </div>
-        
+
     );
 }
 
-export { Item }
+export { Item };
