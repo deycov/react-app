@@ -7,6 +7,42 @@ import { Item } from './components/item';
 import { Search } from './components/search';
 import { Button } from './components/button';
 
+
+// const data = [
+//   {
+//     text: "Hacer tarea",
+//     complete: false,
+//   },
+//   {
+//     text: "Teminar la carrera",
+//     complete: false,
+//   },
+//   {
+//     text: "Pasar por la gata",
+//     complete: false,
+//   },
+//   {
+//     text: "Hacer arroz con leche",
+//     complete: false,
+//   },
+//   {
+//     text: "Romper la realidad en 2",
+//     complete: false,
+//   },
+//   {
+//     text: "Romperla a ella en 4 7u7",
+//     complete: false,
+//   },
+//   {
+//     text: "Comprar cualquier conflei de K-loqs",
+//     complete: false,
+//   },
+//   {
+//     text: "Volver a ver a toda la familia junta",
+//     complete: false,
+//   },
+// ];
+
 function App() {
   // Local storage: proceso de almacenamiento local en un navegador simula ser un backend justamente para almacenar datos
   const dataLocalStorage = localStorage.getItem('TODOS_V1');
@@ -21,6 +57,7 @@ function App() {
   
   // Variables de estado
   const [todos, setTodos] = React.useState(infoLocal); 
+  console.log(todos);
   // Manipulacion de informacion con estados de react
   // Seria como guardar la información del backend para renderizarla en el front 
   const [searchValue, setSearchValues] = React.useState(''); // useState hace referencia a la informacion inicial que obtendrá react en sus estados
@@ -33,26 +70,30 @@ function App() {
     greatings = "Felicidades por terminar las tareas";
   }
 
-   
-
   const searched = todos.filter((todo)=>{
     const todoText = todo.text.toLowerCase();
     const searchTodo = searchValue.toLowerCase();
     return todoText.includes(searchTodo);
   });
 
+  const addNewData = async (newData) => {
+    const newDataSTR = await JSON.stringify(newData);
+    localStorage.setItem('TODOS_V1', newDataSTR);
+    setTodos(newData);
+  }
+
   const validate = (data) => {
     const newData = [...todos];
-    const index = newData.findIndex((todo) => todo.text == data);
+    const index = newData.findIndex((todo) => todo.text === data);
     newData[index].complete = true;
-    setTodos(newData);
+    addNewData(newData);
   }
 
   const erase = (data) => {
     const newData = [...todos];
-    const index = newData.findIndex((todo) => todo.text == data);
+    const index = newData.findIndex((todo) => todo.text === data);
     newData.splice(index,1);
-    setTodos(newData);
+    addNewData(newData);
   } 
   
   return (
