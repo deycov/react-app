@@ -6,7 +6,12 @@ import { useLocalStorage } from '../components/useLocalStorage';
 
 function App() {
   
-  const [todos, addNewTodos] = useLocalStorage('TODOS_V1',[]);
+  const {
+    item: todos, 
+    addNewItem: addNewTodos,
+    load,
+    err
+  } = useLocalStorage('TODOS_V1',[]);
   
   const [searchValue, setSearchValues] = React.useState(''); // useState hace referencia a la informacion inicial que obtendrá react en sus estados
   // Variables de estado *Búsqueda* lo que ingresan
@@ -17,7 +22,7 @@ function App() {
   
   let greatings = '';
   
-  if(totalTodos === 0){
+  if(totalTodos === 0 && !load){
     greatings = "Felicidades por terminar las tareas";
   }
 
@@ -52,6 +57,8 @@ function App() {
       searched={searched}
       validate={validate}
       erase={erase}
+      loading={load}
+      error={err}
     />
   );
 }

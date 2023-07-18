@@ -12,7 +12,9 @@ function AppUI({
   setSearchValues,
   searched,
   validate,
-  erase
+  erase,
+  loading,
+  error
 }) {
 
   return (
@@ -29,6 +31,10 @@ function AppUI({
           setSearchValues={setSearchValues}
         />
         <List>
+          {loading && <h2> Cargando datos... </h2>}
+          {(!loading && searched < 1) && <h2> Crea un nuevo todo..! </h2> }
+          {(error && !loading) && <h2>Ha ocurrido un problema de conexión, intentalo más tarde</h2>}
+
           {searched.map(x => (<Item
             key={x.text} // identificador de cada elemento guardado
             text={x.text}
