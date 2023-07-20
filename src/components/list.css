@@ -1,3 +1,9 @@
+:root{
+    --violet: #9823a9;
+    --wine: #7f7f7f;
+
+}
+
 .container-list{
     margin: 10px auto;
     display: flex;
@@ -75,12 +81,29 @@
 
 @media (max-width: 290px){
    .text{
-    font-size: 14px;
+        font-size: 14px;
    } 
 
    .list-item img{
-    width: 30px;
-    height: 30px;
+        width: 30px;
+        height: 30px;
+    }
 }
+
+.checking{
+    background: linear-gradient(var(--violet) var(--wine)) ;
+    animation-name: loading;
+}
+
+@keyframes loading {
+    0% {
+      background-position: 0% 50%;  
+    }
+    50% {
+      background-position: 50% 100%;
+    }
+    100%{
+      background-position: 0% 50%;
+    }
 }
 

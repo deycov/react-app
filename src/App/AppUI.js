@@ -3,6 +3,10 @@ import { List } from '../components/list';
 import { Item } from '../components/item';
 import { Search } from '../components/search';
 import { Button } from '../components/button';
+import { TodosEmpty } from '../TodosEmpty';
+import { TodosLoad } from '../TodosLoad';
+import { TodosError } from '../TodosError';
+
 
 function AppUI({
   completedTodos,
@@ -31,9 +35,9 @@ function AppUI({
           setSearchValues={setSearchValues}
         />
         <List>
-          {loading && <h2> Cargando datos... </h2>}
-          {(!loading && searched < 1) && <h2> Crea un nuevo todo..! </h2> }
-          {(error && !loading) && <h2>Ha ocurrido un problema de conexión, intentalo más tarde</h2>}
+          {loading && <TodosLoad />}
+          {(!loading && searched < 1) && <TodosEmpty />}
+          {(error && !loading) && <TodosError />}
 
           {searched.map(x => (<Item
             key={x.text} // identificador de cada elemento guardado

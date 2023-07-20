@@ -34,18 +34,16 @@ function useLocalStorage(KEY, initialValue) {
 
   return {item, addNewItem, load, err};
 }
-
-/** 
- * const arr = [{text: 'asdasd', complete: true}, 
+/*
+const arr = [{text: 'asdasd', complete: true}, 
                 {text: 'kmkmk', complete: false},
                 {text: 'e', complete: false},
                 {text: 'Añadido', complete: false},
                 {text: 'Añadida', complete: false},
                 {text: 'Añadide', complete: false},
                 {text: 'Añadimos', complete: false}];
- * localStorage.setItem('TODOS_V1',JSON.stringify(arr));
- * 
- * **/
+localStorage.setItem('TODOS_V1',JSON.stringify(arr));
+*/
 
 
 export { useLocalStorage }
