@@ -1,35 +1,35 @@
-import '../components/list.css';
+import "../components/list.css";
 
-function TodosLoad(){
-  return(
+function TodosLoad() {
+  return (
     <>
-      <li className='item'>
+      <div className="item">
         <div className="list-item">
           <img className="checking" />
 
           <p className="checking"> </p>
 
-          <img className="checking"/>
+          <img className="checking" />
         </div>
-      </li>
-      <li className='item'>
+      </div>
+      <div className="item">
         <div className="list-item">
           <img className="checking" />
 
           <p className="checking"> </p>
 
-          <img className="checking"/>
+          <img className="checking" />
         </div>
-      </li>
-      <li className='item'>
+      </div>
+      <div className="item">
         <div className="list-item">
           <img className="checking" />
 
           <p className="checking"> </p>
 
-          <img className="checking"/>
+          <img className="checking" />
         </div>
-      </li>
+      </div>
     </>
   );
 }
