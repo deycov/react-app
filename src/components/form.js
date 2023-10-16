@@ -1,4 +1,5 @@
 import React from "react";
+import "./form.css";
 
 function FormAddTodo() {
   const [inBlur, setInBlur] = React.useState(false);
@@ -17,7 +18,7 @@ function FormAddTodo() {
       <div className="form-control">
         <textarea
           placeholder='Escribe algo como: "Comprar tomates"'
-          className={inBlur ? "btn-control" : "btn-control"}
+          className={inBlur ? "btn" : "btn"}
           onFocus={() => {
             setInBlur((state) => !state);
           }}
@@ -25,7 +26,7 @@ function FormAddTodo() {
         ></textarea>
         <div className="form-container_buttons">
           <button
-            className="btn-control"
+            className="btn"
             onClick={(ev) => {
               console.log("Presionaste el btn");
               console.log(ev);
@@ -34,7 +35,7 @@ function FormAddTodo() {
             Cancelar
           </button>
           <button
-            className="btn-control"
+            className="btn"
             onClick={(ev) => {
               console.log("Presionaste el btn");
               console.log(ev);

@@ -1,39 +1,37 @@
-.btn-control{
-    position: fixed;
-    right: 20%;
-    bottom: 8%;  
-    width: 68px;
-    height: 68px;
-    border-radius: 50px;
-    border: none;
-    background-color: #fff;
-    color: #000;
-    font-size: 60px;
+.btn-control {
+  position: fixed;
+  z-index: 10000;
+  right: 20%;
+  bottom: 8%;
+  width: 68px;
+  height: 68px;
+  border-radius: 50px;
+  border: none;
+  background-color: #fff;
+  color: #000;
+  font-size: 60px;
 }
 
-.btn-control:hover{
-    background-color: #43c0ea;
-    box-shadow: 0px 0px 12px 10px rgba(0,0,0,0.1);
-    transition: .3s;
+.btn-control:hover {
+  background-color: #43c0ea;
+  box-shadow: 0px 0px 12px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
 }
 
-@media (max-width: 490px){
-    .btn-control{
-        width: 50px;
-        height: 50px;
-        font-size: 40px;
-        right: 10%;
-
-    }
-
+@media (max-width: 490px) {
+  .btn-control {
+    width: 50px;
+    height: 50px;
+    font-size: 40px;
+    right: 10%;
+  }
 }
 
-@media (max-width: 390px){
-    .btn-control{
-        width: 40px;
-        height: 40px;
-        font-size: 30px;
-        right: 10%;
-    }
+@media (max-width: 390px) {
+  .btn-control {
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    right: 10%;
+  }
 }
-

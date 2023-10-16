@@ -1,0 +1,17 @@
+form {
+  position: fixed;
+  width: 100%;
+}
+
+.form-control {
+  background-color: #283747;
+  margin: auto;
+  padding: 20px;
+  border-radius: 12px;
+  z-index: 1000;
+  width: 400px;
+  min-width: auto;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
