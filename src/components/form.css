@@ -15,3 +15,60 @@ form {
   flex-direction: column;
   margin: auto;
 }
+
+.form-textarea {
+  padding: 30px;
+  border-radius: 0;
+  border: none;
+  border: solid #acff 2px;
+  background-color: #283747;
+  font-size: 20px;
+  color: #fff;
+}
+
+.form-textarea:placeholder {
+  color: #fff;
+}
+
+.form-textarea:focus {
+  outline: none;
+  border-radius: 0;
+  border: solid #acffac 2px;
+}
+
+.form-container_buttons {
+  display: flex;
+  width: 90%;
+  margin: 1rem auto;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.btn {
+  padding: 12px 40px;
+  font-size: 16px;
+  border: none;
+  border-radius: 0;
+}
+
+.btn-cancel {
+  color: #fff;
+  background-color: transparent;
+  /* border: solid #402427 1px; */
+  border-bottom: solid #ff3245 2px;
+  transition: all 0.2s;
+}
+.btn-cancel:hover {
+  background-color: #ac2312;
+  border-color: #ac2312;
+}
+.btn-success {
+  color: #fff;
+  background-color: transparent;
+  /* border: solid #345027 1px; */
+  border-bottom: solid #20fc30 2px;
+}
+.btn-success:hover {
+  background-color: #30bd24;
+  border-color: #30bd24;
+}

@@ -1,46 +1,54 @@
 import React from "react";
 import "./form.css";
+import { TodosContext } from "../TodosContext";
 
 function FormAddTodo() {
+  const { setOpenModal, add } = React.useContext(TodosContext);
   const [inBlur, setInBlur] = React.useState(false);
+  const [newTodo, setNewTodo] = React.useState("");
   const [err, setErr] = React.useState(false);
 
-  const handleErrText = (e) => {
+  const handleNewTodo = (e) => {
     e.target.value !== "" ? setErr(true) : setErr(false);
+    setNewTodo(e.target.value);
+  };
+
+  const handleBlur = () => {
+    window.addEventListener("click", (e) => {
+      if (e.target.className.includes("form-textarea")) setInBlur(true);
+      else setInBlur(false);
+    });
   };
 
   return (
     <form
       onSubmit={(e) => {
         e.preventDefault();
+        const todo = {
+          text: newTodo,
+          completed: false,
+        };
+        add(todo);
+        setOpenModal(false);
       }}
     >
       <div className="form-control">
         <textarea
           placeholder='Escribe algo como: "Comprar tomates"'
-          className={inBlur ? "btn" : "btn"}
-          onFocus={() => {
-            setInBlur((state) => !state);
-          }}
-          onChange={(e) => handleErrText(e)}
+          className={inBlur ? "form-textarea inblur" : "form-textarea"}
+          onChange={(e) => handleNewTodo(e)}
+          value={newTodo}
         ></textarea>
         <div className="form-container_buttons">
           <button
-            className="btn"
-            onClick={(ev) => {
-              console.log("Presionaste el btn");
-              console.log(ev);
+            className="btn btn-cancel"
+            onClick={() => {
+              setOpenModal(false);
             }}
           >
             Cancelar
           </button>
-          <button
-            className="btn"
-            onClick={(ev) => {
-              console.log("Presionaste el btn");
-              console.log(ev);
-            }}
-          >
+          <button type="submit" className="btn btn-success">
             Guardar
           </button>
         </div>
