@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/deycov/react-app/static/css/main.41d872f8.css",
+    "main.js": "/deycov/react-app/static/js/main.edc15ece.js",
+    "static/media/check.svg": "/deycov/react-app/static/media/check.1cfbc11661099547a3f6a81dad03ff2c.svg",
+    "static/media/cancel.svg": "/deycov/react-app/static/media/cancel.b0d7d4c5ccb3a05edea478d1307d9d76.svg",
+    "index.html": "/deycov/react-app/index.html",
+    "main.41d872f8.css.map": "/deycov/react-app/static/css/main.41d872f8.css.map",
+    "main.edc15ece.js.map": "/deycov/react-app/static/js/main.edc15ece.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.41d872f8.css",
+    "static/js/main.edc15ece.js"
+  ]
+}
